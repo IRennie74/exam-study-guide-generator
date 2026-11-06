@@ -1,4 +1,6 @@
-# Class Study Compiler Skill — my multiple-PDF study method for Claude Code
+# Exam Study Guide & Practice Test Generator
+
+A Claude Code skill (works with any SKILL.md-compatible agent) that turns your lecture slides, notes, practice problems and revision videos into a **practice exam with an answer key, a step-by-step problem workbook and a full study guide**, all as print-ready PDFs.
 
 This is how I study for tests. I put all the course materials for a test in one folder: lecture slides, the instructor's practice problems and solutions, revision videos. Claude turns that folder into **six PDFs**:
 
@@ -15,13 +17,13 @@ Tests are about solving problems, so most of the pack is problems with worked, s
 
 ## Using it
 
-The repo is **Class Study Compiler Skill**; the skill inside it is called `study-pack`. Install it once (below), open Claude Code in the folder with the course materials, and say:
+The skill is called `exam-study-guide-generator`. Install it once (below), open Claude Code in the folder with the course materials, and say:
 
 ```
-/study-pack
+/exam-study-guide-generator
 ```
 
-or just "make me a study pack for this". It will:
+or just "make me a study guide and practice test for this". It will:
 
 1. **Inventory** the folder (PDFs, practice decks, zipped videos). It asks if a lecture seems to be missing, and if I add files halfway through, it folds them in.
 2. **Extract** everything: PDF text, page images for image-only slides, and frames and contact sheets from revision videos, so it can see the instructor's handwritten working.
@@ -32,14 +34,14 @@ or just "make me a study pack for this". It will:
 ## Install
 
 ```bash
-git clone https://github.com/IRennie74/Class-Study-Compiler-Skill.git
+git clone https://github.com/IRennie74/exam-study-guide-generator.git
 ```
 
 ```bash
-cd Class-Study-Compiler-Skill && ./install.sh
+cd exam-study-guide-generator && ./install.sh
 ```
 
-That copies `study-pack/` into `~/.claude/skills/study-pack`. Requirements: macOS or Linux with `poppler` (pdftotext, pdftoppm), `ffmpeg`, Python 3, and Google Chrome, Edge or Chromium. On a Mac:
+That copies `exam-study-guide-generator/` into `~/.claude/skills/exam-study-guide-generator`. Requirements: macOS or Linux with `poppler` (pdftotext, pdftoppm), `ffmpeg`, Python 3, and Google Chrome, Edge or Chromium. On a Mac:
 
 ```bash
 brew install poppler ffmpeg
@@ -48,7 +50,7 @@ brew install poppler ffmpeg
 ## What's in the repo
 
 ```
-study-pack/                  the skill (what gets installed)
+exam-study-guide-generator/  the skill (what gets installed)
   SKILL.md                   the workflow Claude follows
   references/pdf-set.md      exact spec of each of the six PDFs
   references/problem-writing.md   how problems & show-your-work solutions are written and verified
@@ -66,5 +68,5 @@ install.sh
 `examples/cisc221` holds the HTML sources of the first pack made this way: a 13-page mock and its 17-page key; a 112-page workbook (Unit 0 plus 7 units, 69 problem-type cards, 78 practice problems plus a mixed review); a 28-page master reference; 22 pages of notes; and a 20-page Q&A drill with 26 questions. To rebuild it:
 
 ```bash
-./study-pack/scripts/build.sh examples/cisc221 /tmp/cisc221_pack CISC221
+./exam-study-guide-generator/scripts/build.sh examples/cisc221 /tmp/cisc221_pack CISC221
 ```

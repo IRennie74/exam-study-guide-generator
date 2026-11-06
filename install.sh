@@ -1,11 +1,11 @@
 #!/bin/sh
-# Installs the study-pack skill for Claude Code (user level).
+# Installs the exam-study-guide-generator skill for Claude Code (user level).
 set -e
 DIR=$(cd "$(dirname "$0")" && pwd)
-DEST="$HOME/.claude/skills/study-pack"
+DEST="$HOME/.claude/skills/exam-study-guide-generator"
 mkdir -p "$HOME/.claude/skills"
 rm -rf "$DEST"
-cp -R "$DIR/study-pack" "$DEST"
+cp -R "$DIR/exam-study-guide-generator" "$DEST"
 cp -R "$DIR/examples" "$DEST/examples"
 chmod +x "$DEST"/scripts/*.sh
 echo "Installed to $DEST"

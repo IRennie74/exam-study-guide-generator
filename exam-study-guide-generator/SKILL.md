@@ -1,9 +1,9 @@
 ---
-name: study-pack
-description: Turn a folder of course materials (lecture slides/PDFs, practice problems with solutions, revision videos, notes) into a six-PDF study pack — a mock test, its answer key, a unit-by-unit problem workbook with show-your-work solutions, a complete master reference (also usable as context for another AI), concepts notes, and a question→answer drill ordered by how likely each question type is. Use when the user says /study-pack, "make me a study pack", "study pack for <course>", "the multiple PDF method", "help me study for <test> from these files", or points at a folder of course materials and asks for practice tests or study notes.
+name: exam-study-guide-generator
+description: Exam study guide and practice test generator. Turn a folder of course materials (lecture slides/PDFs, practice problems with solutions, revision videos, notes) into a six-PDF study pack — a mock test, its answer key, a unit-by-unit problem workbook with show-your-work solutions, a complete master reference (also usable as context for another AI), concepts notes, and a question→answer drill ordered by how likely each question type is. Use when the user says /exam-study-guide-generator or /study-pack, "make me a study guide", "make a practice test/exam", "make me a study pack", "study pack for <course>", "the multiple PDF method", "help me study for <test> from these files", or points at a folder of course materials and asks for practice tests or study notes.
 ---
 
-# Study Pack: the multiple-PDF study method
+# Exam Study Guide & Practice Test Generator (the multiple-PDF study method)
 
 The user studies for tests this way: give them the course materials, and they get **six PDFs** built from those materials. The test is about **solving problems**, so the problem PDFs (the workbook, the drill and the mock) matter most. The notes support them.
 
